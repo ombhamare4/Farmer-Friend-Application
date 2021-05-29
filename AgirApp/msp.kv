@@ -1,0 +1,105 @@
+<MspPrice>:
+    Screen:
+        BoxLayout:
+            orientation: 'vertical'
+            MDToolbar:
+                title: '   Price'
+                MDFlatButton:
+                    text: "Back"
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 1
+                    pos_hint:{"center_y":0.5}
+                    on_release: root.manager.current = 'menu'
+            AnchorLayout:
+                anchor_x : 'center'
+                anchor_y : 'center'
+                ScrollView:
+                    size : self.size
+                    GridLayout:
+                        size_hint_y : None
+                        height : self.minimum_height
+                        cols : 3
+                        Button:
+                            size_hint_y:None
+                            text: "Wheat"
+                            on_release: root.wheat_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Paddy"
+                            on_release: root.paddy_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Bajra"
+                            on_release: root.bajra_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Barley"
+                            on_release: root.barley_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Jowar"
+                            on_release: root.jowar_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Maize"
+                            on_release: root.maize_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Ragi"
+                            on_release: root.ragi_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Tur(Arhar)"
+                            on_release: root.tur_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Moong"
+                            on_release: root.moong_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Urad"
+                            on_release: root.urad_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Cotton"
+                            on_release: root.cotton_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Groundnut"
+                            on_release: root.groundnut_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Sunflower"
+                            on_release: root.sunflower_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Soyabean"
+                            on_release: root.soyabean_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Sesamum"
+                            on_release: root.sesamum_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Gram"
+                            on_release: root.gram_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Masur"
+                            on_release: root.masur_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Mustard"
+                            on_release: root.mustard_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Copra"
+                            on_release: root.copra_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Jute"
+                            on_release: root.jute_dialog()
+                        Button:
+                            size_hint_y:None
+                            text: "Coconut"
+                            on_release: root.coconut_dialog()

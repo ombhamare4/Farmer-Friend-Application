@@ -1,0 +1,151 @@
+<LogScreen>:
+    name: 'login'
+    BoxLayout:
+        orientation:'vertical'
+    
+        MDToolbar:
+            title: 'Farmers Friend'
+            elevation: 5
+            pos_hint:{'top':1}
+        
+        MDLabel:
+            halign:'center'
+
+        MDLabel:
+            text:"Login..."
+            font_size:50
+            halign:'center'
+            pos_hint:{'top':1}
+            # pos_hint:{'center_x': 0.5, 'center_y': 0.1}
+            theme_text_color:"Hint"
+            # font_style: "Subtitle2"
+            adaptive_height: True
+        
+        MDLabel:
+            halign:'center'
+
+        MDTextField:
+            id: email_log
+            hint_text: "Enter email"
+            icon_right: "account"
+            icon_right_color: 1,2,3,1
+            pos_hint:{'center_x': 0.5, 'center_y': 0.7}
+            size_hint_x:None
+            width:700
+
+        MDLabel:
+            halign:'center'
+
+        MDTextField:
+            password:True
+            id:password_log
+            hint_text: "Password"
+            helper_text: "or click on forgot username"
+            helper_text_mode: "on_focus"
+            icon_right: "key-variant"
+            icon_right_color: 1,2,1,1
+            pos_hint:{'center_x': 0.5, 'center_y': 0.6}
+            size_hint_x:None
+            width:700
+
+        MDLabel:
+            halign:'center' 
+
+        MDRectangleFlatButton:
+            text: " Login    "
+            pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+            
+            on_release:root.user_log()
+            # #root.manager.current = 'register'
+
+        MDLabel:
+            halign:'center'
+
+        MDTextButton:
+
+            text:"Don't Have Account ?"
+            pos_hint:{'center_x': 0.5, 'center_y': 0.2}
+            theme_text_color:"Custom"
+            text_colour:1,1,1,1
+            on_press: root.manager.current = 'reg'
+
+        MDLabel:
+            halign:'center'
+        
+        MDLabel:
+            halign:'center'
+
+            
+            
+<registerScreen>:
+    # BoxLayout:
+    #     orientation: 'vertical'
+    BoxLayout:
+        orientation:"vertical"
+        MDToolbar:
+            title: 'Farmer  Friend Application'
+            elevation: 5
+            pos_hint:{'top':1}
+                
+        MDLabel:
+            halign: 'center'
+            name: 'register'
+        MDIconButton:
+            icon: 'registered-trademark'
+            pos_hint:{'center_x': 0.5, 'center_y': 0.8}
+
+        MDLabel:
+            halign:'center'
+
+        MDTextField:
+            id: username_reg
+            hint_text: "Enter your Name"
+            pos_hint:{'center_x': 0.5, 'center_y': 0.7}
+            size_hint_x:None
+            width:700
+
+        MDLabel:
+            halign:'center'
+        
+        MDTextField:
+            id:email_reg
+            hint_text:"Enter email-id"
+            icon_right: "python"
+            icon_right_color: 1,0,0,1
+            pos_hint:{'center_x': 0.5, 'center_y': 0.6}
+            size_hint_x:None
+            width:700    
+
+        MDLabel:
+            halign:'center'
+
+        MDTextField:
+            password:True
+            id:password_reg
+            hint_text:"Enter Password"
+            icon_right: "phone-dial"
+            icon_right_color: 1,0,1,1
+            pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+            size_hint_x:None
+            width:700
+
+        MDLabel:
+            halign:'center'
+
+        
+        MDRectangleFlatButton:
+            text: " Register    "
+            pos_hint:{'center_x': 0.5, 'center_y': 0.4}
+            on_release:root.user_reg()
+
+        MDLabel:
+            halign:'center'   
+            
+        MDRectangleFlatButton:
+            text:'  Back    '
+            pos_hint: {'center_x':0.5,'center_y':0.4}
+            on_release: root.manager.current = 'log'    
+
+        MDLabel:
+            halign:'center'
+    

@@ -1,0 +1,306 @@
+<RulesScreen>:    
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title : "Rules and Schemes"
+            pos_hint:{"top":1}
+            MDFlatButton:
+                text:"Back"
+                pos_hint:{"center_y":0.5}
+                on_release: root.manager.current = 'menu'
+        
+        ScrollView:    
+            MDList:
+                OneLineListItem:
+                    text: "Awards for Farmer"
+                    on_release: root.manager.current = 'AFF'
+                OneLineListItem:
+                    text: "Crops related"
+                    on_release: root.manager.current = 'croprel'
+                OneLineListItem:
+                    text: "Fisheries Related"
+                    on_release: root.manager.current = 'fishrel'
+                OneLineListItem:
+                    text: "Livestock and Poultry Related"
+                    on_release: root.manager.current = 'lpr'
+                OneLineListItem:
+                    text: "Policy Papers"
+                    on_release: root.manager.current = 'polpaper'
+                OneLineListItem:
+                    text: "Rural Empolyment Related"
+                    on_release: root.manager.current = 'eulRmpRel'
+                OneLineListItem:
+                    text: "UseFull Resources"
+                    on_release: root.manager.current = 'usRes'   
+
+
+<AwardsForFarmerScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            title: 'Awards For Farmer'
+
+            MDFlatButton:
+                text: "Back"
+                pos_hint: {"center_y": 0.5}
+                on_release: root.manager.current = 'Rules'
+
+        Carousel:
+            direction: "bottom"
+
+            BoxLayout:
+                orientation: 'vertical'
+                MDLabel:
+                    theme_text_color: "Primary"    
+                    font_size: 80
+                    text: "Awards For Farmers"
+                    halign: "center"
+
+            BoxLayout:
+                orientation: 'vertical'
+                MDLabel:
+                    theme_text_color: "Primary"
+                    markup: True
+                    text: "[b]1) Haldar Organic Farmer Award:[/b]\n   In order to recognize outstanding contribution of organic farmers Indian Council of Agricultural Research (ICAR), New Delhi has instituted an award titled Haldhar Organic Farmer Award.\n   Entrepreneurship and enterprise development/ management strategies/ additional information/ practices generated in practicing and promoting organic farming.\n Establishing linkages especially in respect to product certification and marketing ,Additional income to the individual farmer/ group of farmer."
+
+            BoxLayout:
+                orientation: 'vertical'
+                MDLabel:
+                    theme_text_color: "Primary"
+
+                    markup: True
+                    text:"[b]2) Jagjivan Ram Innovative Farmer Award:[/b]\n The award will be for the creative approach – Innovative farming, technological acceptance, contribution in enhanced productivity, farming attributes shown by a farmer. This may involve activities like farmers innovation in resource conservation and enhancement, germplasm collection and conservation of plant, animals and fish species or Management Practices, Soil and Water Management/Conservation, Development of Appropriate Tools and Equipment, Innovations in Dry Farming Technique/Practices, New Improved Food and Feed Products and Control of Diseases among Plant/Animal s, processing of agricultural produce & marketing. \n [b]Administration of the Award:[/b] A five-member Judging Committee will be appointed by the DG, ICAR including one representative farmer to make suitable recommendations. In case no suitable application are received, the award shall not be given. The post award programme/grant will be administered by Division of Agricultural Extension."
+
+            BoxLayout:
+                orientation: 'vertical'
+                MDLabel:
+                    theme_text_color: "Primary"
+                    markup: True
+                    text: "N.G. Ranga Farmer Award for Diversified Agriculture :[/b]\n The Indian Council of Agricultural Research, under the Ministry of Agriculture and Farmers Welfare, Government of India has instituted the N.G. Ranga Farmer Award for Diversified Agriculture in order to recognize outstanding contribution of innovative farmers for diversified agriculture.\n[b]Administration of the Award:[/b] A five-member Judging Committee will be appointed by the DG, ICAR including one representative farmer to assess nominations and make suitable recommendations.\n[b]Criteria of Selection:[/b] The farmer’s diversified agricultural activities should result in:\n New knowledge package of practices management strategies\n\n Additional income to the individual farmer/farming community\n\n "
+
+
+            BoxLayout:
+                orientation: 'vertical'
+                MDLabel:
+                    theme_text_color: "Primary"
+                    markup: True
+                    text: "[b]Pandit Deen Dayal Upadhyay Antyodaya Krishi Puruskar :[/b]\n   The Indian Council of Agricultural Research, under the Ministry of Agriculture and Farmers Welfare, Government of India has instituted Pandit Deendayal Upadhyay Antyodaya Krishi Puruskar for recognizing the contributions of marginal, small and landless farmers for developing integrated and sustainable models of agricultural farming. The awards include one award at national level comprising Rs. One lakh and 11 zonal awards comprising of Rs. 50 thousand each along with a citation and certificate.\n[b]Procedure for Nomination:[/b]The award will strictly be based on the nominations of suitable candidates for which the nominations, in the prescribed format for the award, shall be forwarded by the Vice - Chancellor /Director of Extension of Agricultural University/ Director of ICAR Institute / ATARI Director. One individual may not nominate more than 2 farmers. The Recommendations may only be made in respect of the farmers within the jurisdiction of the University/ Institute/ ATARI concerned. The application nominations should be sent to ADG (Coordination), ICAR, Krishi Bhawan, New Delhi.\n All the nominations thus received will be put before the duly constituted Award Judging Committee which will decide the award on merit. The National Award will also be decided from amongst the Zonal Award winners. In subsequent years the National Award will be decided from the current and two previous years’ zonal level award winners. A zonal award winner will not be considered for the same award for next 10 years after winning the award. The call for awards is generally launched during December-January every year."
+
+<CropsrelatedScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            title: 'Cropsrelated'
+
+            MDFlatButton:
+                text: "Back"
+                pos_hint: {"center_y": 0.5}
+                on_release: root.manager.current = 'Rules'
+
+        Carousel:
+            direction: "bottom"
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                MDLabel:
+                    font_size: 80
+                    text: "Crops Related schemes"
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+            MDLabel:
+                theme_text_color: "Primary"
+
+                markup: True
+                text: "[b]Agricultural Marketing Infrastructure :[/b]\n It is well known that small farmers do not have economic strength to retain produce with them till the market prices are favourable. A network of rural godowns will enable small farmers to enhance their holding capacity in order to sell their produce at remunerative prices and avoid distress sales.\n\n Objective of the scheme:\n Main objectives of scheme include creation of scientific storage capacity with allied facilities in rural areas to meet out various requirements of farmers for storing farm produce, processed farm produce, agricultural inputs, etc., and prevention of distress sale by creating the facility of pledge loan and marketing credit."
+
+            BoxLayout:
+                orientation: 'vertical'
+                MDLabel:
+                    theme_text_color: "Primary"
+
+                    markup: True
+                    text: "[b]Biotech-KISAN scheme [/b]\nBiotech-Krishi Innovation Science Application Network (Biotech-KISAN) is a Department of Biotechnology, Ministry of Science and Technology initiative that empowers farmers, especially women farmers. It aims to understand the problems of water, soil, seed and market faced by the farmers and provide simple solutions to them.\n The Scheme is for farmers, developed by and with farmers, it empowers women, impacts locally, connects globally, is Pan-India, has a hub-and spoke model and stimulates entrepreneurship and innovation in farmers."
+
+<FisheriesRelatedScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            title: 'Fisheries Related Schemes'
+
+            MDFlatButton:
+                text: "Back"
+                theme_text_color: "Primary"
+
+                pos_hint: {"center_y": 0.5}
+                on_release: root.manager.current = 'Rules'
+
+        Carousel:
+            direction: "bottom"
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                MDLabel:
+                    font_size: 80
+                    text: "Fisheries Related schemes"
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+            MDLabel:
+                theme_text_color: "Primary"
+                markup: True
+                text: "[b]Blue Revolution:[/b]\nBlue Revolution, the Neel Kranti Mission has the vision to achieve economic prosperity of the country and the fishers and fish farmers as well as contribute towards food and nutritional security through full potential utilization of water resources for fisheries development in a sustainable manner, keeping in view the bio-security and environmental concerns.\n \nVision:\n Creating an enabling environment for integrated development of the full potential of fisheries of the country, alongwith substantially improvement in the income status of fishers and fish farmers keeping in view the sustainability, bio-security and environmental concerns."
+
+
+            MDLabel:
+                theme_text_color: "Primary"
+                markup: True
+                text: "[b]Fisheries Development in Reservoirs [/b]\nThe State Government (Department of Fisheries) is the main agency for implementation of the Reservoir Fisheries Development Programme. They are responsible for selection of the reservoirs to be developed under the National Fisheries Development Board (NFDB) programme, leasing of the water body to the beneficiary i.e. the lessee, monitoring and evaluation of the stocking and harvesting activities, assisting the beneficiaries in establishing sound forward and backward\n linkages, providing technical support and in capacity building of the beneficiaries from time to time."
+
+<LivestockandpoultryrelatedScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            title: 'Livestock and poultry related'
+
+            MDFlatButton:
+                text: "Back"
+                theme_text_color: "Primary"
+
+                pos_hint: {"center_y": 0.5}
+                on_release: root.manager.current = 'Rules'
+
+        Carousel:
+            direction: "bottom"
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                MDLabel:
+                    text: "Livestock and poultry related"
+                    font_size: 80
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+            MDLabel:
+                theme_text_color: "Primary"
+                markup: True
+                text: "[b]Dairy Entrepreneurship Development Scheme :[/b]\nDairy/Poultry Venture Capital Fund scheme was started in December 2004 with an outlay of Rs. 25 Crore.  This scheme has been fragmented into two separate scheme viz. Dairy Venture Capital Fund & Poultry Venture Capital Fund from the financial year 2008-09.\n During June 2010, the Dairy Venture Capital Fund scheme was revamped to Dairy Entrepreneurship Development Scheme to make it more effective through  wider coverage, enhanced component-wise outlays and by including new components for assistance under the scheme. The new modified scheme DEDS was started from 01.09.2010."
+
+
+            MDLabel:
+                theme_text_color: "Primary"
+                markup: True
+                text: "[b]Financial assistance schemes of AWBI :[/b]\n The Animal Welfare Board of India (AWBI) is the Country’s Apex body for promoting the welfare of animals. It functions under administrative control of Ministry of Environment, Forest and Climate Change, Govt. of India. The Board was established in 1962 as per the provision of Section 4 of the Prevention of Cruelty to Animals Act, 1960 (No. 59 of 1960).\nThrough its services, Board ensures that animal welfare laws in the country are diligently followed, provides grants to Animal Welfare Organizations and advises the Government of India on animal welfare issues. Presently, the AWBI headquarters is in Chennai, Tamil Nadu. "
+
+<PolicypapersScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            title: 'Policypapers'
+
+            MDFlatButton:
+                text: "Back"
+                pos_hint: {"center_y": 0.5}
+                on_release: root.manager.current = 'Rules'
+
+        Carousel:
+            direction: "bottom"
+            BoxLayout:
+                orientation: 'vertical'
+                MDLabel:
+                    font_size: 80
+                    text: "Policy papers"
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+            MDLabel:
+                theme_text_color: "Primary"
+
+                markup: True
+                text: "[b]Policy paper on doubling farmers income:[/b]\nPast strategy for development of the agriculture sector in India has focused primarily on raising agricultural output and improving food security. The net result has been a 45 per cent increase in per person food production, which has made India not only food self-sufficient at aggregate level, but also a net food exporting country.\n The strategy did not explicitly recognise the need to raise farmers' income and did not mention any direct measure to promote farmers welfare. The net result has been that farmers income remained low, which is evident from the incidence of poverty among farm households.\nLow level of absolute income as well as large and deteriorating disparity between income of a farmer and non-agricultural worker constitute an important reason for the emergence of agrarian distress in the country during 1990s, which turned quite serious in some years. The country also witnessed a sharp increase in the number of farmers suicides during 1995 to 2004 - losses from farming, shocks in farm income and low farm income are identified as the important factors for this. The low and highly fluctuating farm income is causing detrimental effect on the interest in farming and farm investments, and is also forcing more and more cultivators, particularly younger age group, to leave farming. This can cause serious adverse effect on the future of agriculture in the country."
+
+
+<RuralemploymentrelatedScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            title: 'Rural Employment Related'
+
+            MDFlatButton:
+                text: "Back"
+                pos_hint: {"center_y": 0.5}
+                on_release: root.manager.current = 'Rules'
+
+        Carousel:
+            direction: "bottom"
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                MDLabel:
+                    font_size: 80
+                    text: "Rural Empolyment Related"
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+            MDLabel:
+                theme_text_color: "Primary"
+
+                markup: True
+                text: "[b]Agri Clinics and Agri Business Centres Scheme :[/b]\nThe Ministry of Agriculture and Farmers' Welfare, Government of India, in association with NABARD and MANAGE has launched this unique scheme to take better methods of farming to each and every farmer across the country. This programme aims to tap the expertise available in the large pool of Agriculture Graduates. Irrespective of whether you are a fresh graduate or not, or whether you are currently employed or not, you can set up your own AgriClinic or AgriBusiness Centre and offer professional extension services to innumerable farmers."
+            MDLabel:
+                theme_text_color: "Primary"
+
+                markup: True
+                text: "[b]Coir Udyami Yojana[/b]\nThe main objectives of the scheme are as under\n:\nTo modernize Coir Industry by adoption of modern technology in production and processing of coir and coir products;\nUpgradation of the production and processing technology for improving the productivity, quality and product diversification;\nTo increase the efficiency and productivity for enhancing the earnings of the workers engaged in the sector;\nTo enhance the utilization of coconut husk and fo r increasing the production of coir fibre and coir products;\nTo generate employment in the rural areas of the coco nut producing States /Union Territories;\nTo provide more employment opportunities for women in the rural sector for gender empowermen"
+
+
+<UsefullResourcesScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDToolbar:
+            pos_hint: {'top': 1}
+            title: 'Usefull Resources'
+
+            MDFlatButton:
+                text: "Back"
+                pos_hint: {"center_y": 0.5}
+                on_release: root.manager.current = 'Rules'
+
+        Carousel:
+            direction: "bottom"
+
+            BoxLayout:
+                orientation: 'vertical'
+
+                MDLabel:
+                    font_size: 80
+                    text: "UseFull Resources"
+                    halign: "center"
+                    theme_text_color: "Primary"
+
+            MDLabel:
+                theme_text_color: "Primary"
+
+                markup: True
+                text: "[b]Agriculture related Portals:[/b]\n\nKisan Portal / Farmer Portal, Ministry of Agriculture and Farmers' Welfare\nm Kisan Portal, Ministry of Agriculture and Farmers' Welfare\nAgri insurance portal, Ministry of Agriculture and Farmers' Welfare\nDistrict specific Agro advisory portal - Indian Meteorological Department."
+            MDLabel:
+                theme_text_color: "Primary"
+                markup: True
+                text: "[b]Publications:[/b]\n\nState of Indian Agriculture 2015-16\nIndian Agriculture Statistics at a glance  2017\nIndian Agriculture Statistics at a glance  2017\nHorticultural Statistics at a Glance-2018\nCompendium of Agriculture related schemes 2018-19  (Farmer Handbook)\nState of Forest Report 2017\nA Hand Book on National Programme for Organic Production \nAgricultural legislations in India .\n"

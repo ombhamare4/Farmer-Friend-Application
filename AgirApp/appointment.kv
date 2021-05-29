@@ -1,0 +1,65 @@
+<AppoitmentScreen>:
+    NavigationLayout:
+        ScreenManager:
+            Screen:
+
+                MDToolbar:
+                    title: 'Book Appoitment'
+                    pos_hint:{'top':1}
+                    elevation:5
+
+                    MDFlatButton:
+                        text: "Back"
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        pos_hint:{"center_y":0.5}
+                        on_release: root.manager.current = 'menu'
+                MDTextField:
+                    id:appoit_name
+                    hint_text: "Name"
+                    mode: "rectangle"
+                    pos_hint:{'center_x': 0.5, 'center_y': 0.7}
+                    size_hint_x:None
+                    width:700
+
+                MDTextField:
+                    id:appoit_email
+                    hint_text: "Email"
+                    mode: "rectangle"
+                    pos_hint:{'center_x': 0.5, 'center_y': 0.79}
+                    size_hint_x:None
+                    width:700
+
+                MDTextField:
+                    id:appoit_number
+                    hint_text: "Phone Number"
+                    mode: "rectangle"
+                    pos_hint:{'center_x': 0.5, 'center_y': 0.6}
+                    size_hint_x:None
+                    width:700
+
+                MDTextField:
+                    id:appoit_vist
+                    hint_text: "Reason to visit"
+                    mode: "rectangle"
+                    pos_hint:{'center_x': 0.5, 'center_y': 0.5}
+                    size_hint_x:None
+                    width:700
+
+                MDRectangleFlatButton:
+                    text: "Select Date"
+                    pos_hint: {'center_x': .3, 'center_y': .4}
+                    size_hint_x:None
+                    on_release: app.show_date_picker()
+
+                MDRectangleFlatButton:
+                    text: "Select Time"
+                    pos_hint: {'center_x': .7, 'center_y': .4}
+                    size_hint_x:None
+                    on_release: app.show_time_picker()
+
+                MDRectangleFlatButton:
+                    text: "   Submit   "
+                    pos_hint: {'center_x': .5, 'center_y': .3}
+                    size_hint_x:None
+                    on_release:root.store_appointments()

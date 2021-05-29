@@ -1,0 +1,57 @@
+<MainMenu>:
+    Screen:
+        BoxLayout:
+            orientation: 'vertical'
+            MDToolbar:
+                title: 'Menu'
+                elevation : 10
+            ScrollView:
+                MDList:
+                    TwoLineIconListItem:
+                        on_release:root.comming_soon()
+                        text: "Profile"
+                        secondary_text: "Your personal information"
+                        IconLeftWidget:
+                            icon: "account-details"
+                    TwoLineIconListItem:
+                        on_release:root.manager.current = 'lib'
+                        text: "Library"
+                        secondary_text: "Crop and farming info"
+                        IconLeftWidget:
+                            icon: "book"
+
+                    TwoLineIconListItem:
+                        on_release:root.manager.current = 'Rules'
+                        text: "Rules"
+                        secondary_text: "Rules and schemes"
+                        IconLeftWidget:
+                            icon: "book-open"
+                    TwoLineIconListItem:
+                        on_release:root.manager.current = 'msp'
+                        text: "Prices"
+                        secondary_text: "MSP and mandi rates"
+                        IconLeftWidget:
+                            icon: "currency-inr"
+                    TwoLineIconListItem:
+                        on_release:root.comming_soon()
+                        text: "Weather"
+                        secondary_text: "Temperature and climate"
+                        IconLeftWidget:
+                            icon: "cloud"
+                    TwoLineIconListItem:
+                        on_release:root.manager.current = 'appoit'
+                        text: "Appointment"
+                        secondary_text: "Book appointment for your needs"
+                        IconLeftWidget:
+                            icon: "office-building"
+                    TwoLineIconListItem:
+                        on_release:root.comming_soon()
+                        text: "Shop"
+                        secondary_text: "Buy new equipments"
+                        IconLeftWidget:
+                            icon: "shovel"
+            MDBottomAppBar:
+                MDToolbar:
+                    icon: 'theme-light-dark'
+                    type: 'bottom'
+                    on_action_button: app.show_theme_picker()
